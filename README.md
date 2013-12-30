@@ -6,7 +6,7 @@ Créer et préparer un élément HTML à la chaine.
 
 ```js
 var div = new Builder('div')
-    .text('Exemple ')
+    .html('<b>Exemple</b> ')
     .attr('title', 'Exemple !')
     .append(new Builder('a')
         .text('test')
@@ -18,7 +18,7 @@ var div = new Builder('div')
     .insert(document.body);
 ```
 
-Créer `<div title="Exemple !">Exemple <a style="color:red">test</a></div>` dans `<body>`.
+Créer `<div title="Exemple !"><b>Exemple</b> <a style="color:red">test</a></div>` dans `<body>`.
 
 ### Références
 
@@ -36,6 +36,7 @@ Toutes les méthodes sont `chainable` _(elles retournent l'instance d'où elles 
 * `.attr(attribut, valeur)` Ajoute l'attribut à `node`.
 * `.className(class)` Défini l'attribut className.
 * `.text(text)` Insère le texte dans `node`.
+* `.html(html)` Insère le html dans `node`.
 * `.event(type, callback)` Ajoute un event à `node`.
 * `.append(child)` Insère un autre élément dans `node`.
 * `.insert(parent)` Insère `node` dans un autre élément.
