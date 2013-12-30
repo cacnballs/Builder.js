@@ -22,6 +22,8 @@ Créer `<div title="Exemple !">Exemple <a style="color:red">test</a></div>` dans
 
 ### Références
 
+##### class Builder
+
 ###### Propriétés
 
 * `.node` _(HTMLElement)_ L'élément HTML.
