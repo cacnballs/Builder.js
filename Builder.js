@@ -58,18 +58,18 @@ Builder.prototype.event = function(event, callback)
 // function append(HTMLElement|Builder child):@Chainable
 Builder.prototype.append = function(child)
 {
-    this.node.appendChild((child instanceof Builder)? child.node : child);
+    this.node.appendChild((child.nodeType)? child : child.node);
 
     return this;
 };
 // function insert(HTMLElement|Builder parent, HTMLElement|Builder before):@Chainable
 Builder.prototype.insert = function(parent, before)
 {
-    parent = (parent instanceof Builder)? parent.node : parent;
+    parent = (parent.nodeType)? parent : parent.node;
 
     if(before)
     {
-        parent.insertBefore(this.node, (before instanceof Builder)? before.node : before);
+        parent.insertBefore(this.node, (before.nodeType)? before : before.node);
     }
     else
     {
