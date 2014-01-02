@@ -13,6 +13,13 @@ Builder.prototype.css = function(style, value)
 
     return this;
 };
+// function set(String attr, String value):@Chainable
+Builder.prototype.set = function(attr, value)
+{
+    this[attr] = value;
+
+    return this;
+};
 // function attr(String attr, String value):@Chainable
 Builder.prototype.attr = function(attr, value)
 {

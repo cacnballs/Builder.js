@@ -33,7 +33,8 @@ Créer `<div title="Exemple !"><b>Exemple</b> <a style="color:red">test</a></div
 Toutes les méthodes sont `chainable` _(elles retournent l'instance d'où elles sont exécutées)_.
 
 * `.css(style, valeur)` Ajoute le style css à `node`.
-* `.attr(attribut, valeur)` Ajoute l'attribut à `node`.
+* `.set(attribut, valeur)` Ajoute l'attribut à `node`. _(Conseillé pour `value`, `id`, `className`, `href`)_
+* `.attr(attribut, valeur)` Ajoute l'attribut à `node` avec la méthode native `node.setAttribute()`.
 * `.className(class)` Défini l'attribut className.
 * `.text(text)` Insère le texte dans `node`.
 * `.html(html)` Insère le html dans `node`.
