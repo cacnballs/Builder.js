@@ -44,3 +44,8 @@ Toutes les méthodes sont `chainable` _(elles retournent l'instance d'où elles 
 * `.insert(parent)` Insère `node` dans un autre élément.
 * `.remove()` Retire `node` du DOM. _(`node` n'est pas supprimé!)_
 * `.clear()` Retire les éléments contenus dans `node`.
+
+###### Fonctions
+
+* `Builder.getPos(element, absolute = false)` _(Object)_ Si `absolute` est `true`, retourne les positions `x` et `y` par rapport à la page sinon retourne les position `top` et `left` de `element`.
+* `Builder.getStyle(element, style)` _(String)_ Retourne la valeur du `style` CSS de `element`.

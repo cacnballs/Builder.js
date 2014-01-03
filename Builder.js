@@ -109,3 +109,51 @@ Builder.prototype.clear = function()
 
     return this;
 };
+
+// function getPos(HTMLElement|Builder element, boolean absolute):Object{top:int, left:int}
+Builder.getPos = function(element, absolute)
+{
+    element = (element.nodeType)? element : element.node;
+
+    var top = 0;
+    var left = 0;
+
+    while(element && element.offsetParent)
+    {
+        top += element.offsetTop;
+        left += element.offsetLeft;
+
+        element = element.offsetParent;
+
+        if(!absolute && Builder.getStyle(element, 'position') === 'relative')
+        {
+            break;
+        }
+    }
+
+    return {'top': top, 'left': left};
+};
+// function getStyle(HTMLElement|Builder element, String style):String
+Builder.getStyle = function(element, style)
+{
+    element = (element.nodeType)? element : element.node;
+
+    if(style === 'top' || style === 'left')
+    {
+        return Builder.getPos(element, false)[style] +'px';
+    }
+    else if(document.defaultView && document.defaultView.getComputedStyle)
+    {
+        return document.defaultView.getComputedStyle(element, null).getPropertyValue(prop);
+    }
+    else if(element.currentStyle)
+    {
+        style = style.replace(/\-(\w)/g, function(match, c1){return c1.toUpperCase()});
+
+        return element.currentStyle[style];
+    }
+    else
+    {
+        return element.style[style];
+    }
+};
