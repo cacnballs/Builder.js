@@ -48,6 +48,13 @@ Builder.prototype.html = function(html)
 
     return this;
 };
+// function add(String html):@Chainable
+Builder.prototype.add = function(html)
+{
+    this.node.innerHTML += html;
+
+    return this;
+};
 // function event(String event, function callback):@Chainable
 Builder.prototype.event = function(event, callback)
 {

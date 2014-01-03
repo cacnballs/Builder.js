@@ -38,6 +38,7 @@ Toutes les méthodes sont `chainable` _(elles retournent l'instance d'où elles 
 * `.className(class)` Défini l'attribut className.
 * `.text(text)` Insère le texte dans `node`.
 * `.html(html)` Insère le html dans `node`.
+* `.add(html)` Ajoute le html dans `node` après ce qu'il contient déjà.
 * `.event(type, callback)` Ajoute un event à `node`.
 * `.append(child)` Insère un autre élément dans `node`.
 * `.insert(parent)` Insère `node` dans un autre élément.
