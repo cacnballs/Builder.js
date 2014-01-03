@@ -16,7 +16,7 @@ Builder.prototype.css = function(style, value)
 // function set(String attr, String value):@Chainable
 Builder.prototype.set = function(attr, value)
 {
-    this[attr] = value;
+    this.node[attr] = value;
 
     return this;
 };
