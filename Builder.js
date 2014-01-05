@@ -144,7 +144,7 @@ Builder.getStyle = function(element, style)
     }
     else if(document.defaultView && document.defaultView.getComputedStyle)
     {
-        return document.defaultView.getComputedStyle(element, null).getPropertyValue(prop);
+        return document.defaultView.getComputedStyle(element, null).getPropertyValue(style);
     }
     else if(element.currentStyle)
     {
