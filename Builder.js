@@ -37,7 +37,9 @@ Builder.prototype.className = function(className)
 // function text(String text):@Chainable
 Builder.prototype.text = function(text)
 {
-    this.node.innerText = text;
+    this.clear();
+
+    this.node.appendChild(document.createTextNode(text));
 
     return this;
 };
