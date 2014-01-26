@@ -95,7 +95,10 @@ Builder.prototype.insert = function(parent, before)
 // function remove():@Chainable
 Builder.prototype.remove = function()
 {
-    this.node.parentNode.removeChild(this.node);
+    if(this.node.parentNode != null)
+    {
+        this.node.parentNode.removeChild(this.node);
+    }
 
     return this;
 };
