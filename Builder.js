@@ -1,3 +1,10 @@
+/**
+ * Builder.js
+ *
+ * https://github.com/JWhile/Builder.js
+ *
+ * version 1.0.0
+ */
 
 /**
  * class Builder(String|HTMLElement element)

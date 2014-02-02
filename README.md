@@ -1,5 +1,7 @@
 # Builder.js
 
+_v1.0.0_
+
 Créer et préparer un élément HTML à la chaine.
 
 ### Exemple
@@ -54,7 +56,7 @@ Toutes les méthodes sont `chainable` _(elles retournent l'instance d'où elles 
 
 > The MIT License (MIT)
 > 
-> Copyright (c) 2013 juloo
+> Copyright (c) 2013-2014 juloo
 > 
 > Permission is hereby granted, free of charge, to any person obtaining a copy of
 > this software and associated documentation files (the "Software"), to deal in
